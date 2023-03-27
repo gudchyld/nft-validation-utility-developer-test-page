@@ -18,11 +18,15 @@ const NftValidationUtilitySection = () => {
     const [utilityId, setUtilityId] = React.useState(
         JSON.parse(localStorage.getItem('nft-validation-utility-id')) || undefined
     );
-    const [newUtilityId, setNewUtilityId] = React.useState('');
     const [utility, setUtility] = useState(undefined);
     const [step, setStep] = useState(0);
-
-
+    
+    const [newUtilityId, setNewUtilityId] = React.useState('fb774a1d-c7aa-403b-a1f3-55538a0dc76e');
+    useEffect(() => {
+        // setNewUtilityId()
+        updateUtilityId()
+    }, [])
+    
     const updateUtilityId = () => {
         localStorage.setItem('nft-validation-utility-id', JSON.stringify(newUtilityId));
         setUtilityId(newUtilityId);
@@ -31,9 +35,6 @@ const NftValidationUtilitySection = () => {
     useEffect(() => {
         init()
     }, [utilityId]);
-
-
-
 
     async function init() {
         console.log('init')
@@ -63,11 +64,11 @@ const NftValidationUtilitySection = () => {
     return (<div
         className="border border-zinc-300 p-5 md:p-10 ">
         <div>
-            <InputLabel>Utility ID</InputLabel>
+            {/* <InputLabel>Utility ID</InputLabel>
             <div className="flex space-x-2.5">
                 <TextInput className="flex-grow" onChange={(e) => setNewUtilityId(e.target.value)}></TextInput>
                 <Button onClick={updateUtilityId}>Update Utility ID</Button>
-            </div>
+            </div> */}
 
         </div>
         <hr className="my-5"/>
@@ -97,7 +98,7 @@ const NftValidationUtilitySection = () => {
 
                     </div>
                 </div>
-            </div>: <div><h2>Load utility by pasting the Utility ID in the field above.</h2></div> }
+            </div>: <div><h2>Loading...</h2></div> }
     </div>)
 };
 

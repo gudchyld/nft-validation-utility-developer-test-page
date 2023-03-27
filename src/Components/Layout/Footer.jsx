@@ -53,7 +53,7 @@ const navigation = {
 
 export default function Footer() {
     return (
-        <footer className="bg-white">
+        <footer className="bg-slate-800">
             <div className="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
                 <nav className="-mb-6 flex justify-center space-x-12" aria-label="Footer">
                     {navigation.main.map((item) => (
