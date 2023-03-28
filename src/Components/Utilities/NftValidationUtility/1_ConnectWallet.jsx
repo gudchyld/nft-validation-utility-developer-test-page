@@ -16,8 +16,8 @@ const ConnectWallet = ({utility}) => {
     }
     return (
         <div className="h-full flex flex-col">
-            <p>This is an example workflow on how to claim your exclusive sticker.<br/> Simply follow the steps mentioned above - we will guide you through it. <br/><br/>
-                Proceed by connecting your wallet.
+            <p>Connect your wallet and follow along with the steps <br/>
+                to access the gallery
             </p>
 
             <div className="mt-5 flex flex-grow items-end justify-end">

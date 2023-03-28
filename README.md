@@ -19,3 +19,7 @@ This project utilizes whal3s NFT validation utility to create a token gated appl
 
 It allows access to an exclusive gallery for token holders and also give
 an option for intended holders to purchase on open sea
+
+### Live Link
+visit https://photo-gate.vercel.app/
+to see this app in action
